@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+h1 {
+    margin:5px;
+    font-family:Inter;
+    text-align: center;
+}
+#call {
+    display:none;
+}
