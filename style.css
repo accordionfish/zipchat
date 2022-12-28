@@ -1,9 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-h1 {
-    margin:5px;
-    font-family:Inter;
-    text-align: center;
-}
-#call {
-    display:none;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+    h1 {
+        margin:5px;
+        font-family:Inter;
+        text-align: center;
+    }
+    #call {
+        display:none;
+        height:590px;
+        width:1500px;
+    }
+    #localvideo {
+        display:none;
+        height:100px;
+        width:300px;
+        position:absolute;
+        left:20%;
+    }
+    p {
+        font-family:Roboto;
+    }
+    #id {
+        font-size:x-large;
+        font-family: Roboto;
+    
+        
+    }
+    #waiting {
+        font-family: Roboto;
+        font-size:large;
+    }
+    #host {
+        border:none;
+        background:#00c24f;
+        height:50px;
+        width:50px;
+        border-radius:50px;
+        
+    }
+    #id_container {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom:0;
+        margin:50px;
+        width:80vw;
+    }
+
+    #id_input {
+        border:none;
+        background-color: hsla(249, 14%, 49%, 0.3);
+        border-radius: 5px;
+        height:50px;
+        width:900px;
+        margin:auto;
+        font-size: 40px;
+        font-family:Roboto; 
+        color:white;
+        align-self:center;
+    }
+    #id_input:focus {
+        border-bottom:2px #97a2d6 solid;
+        outline:none;
+    }
+    #id_input::placeholder{
+        color:rgb(191, 188, 188);
+    }
+    
+    body {
+        background:url(./baguette_bg.png);
+        background-repeat: repeat;
+        background-size:100px;
+        animation: scroll-anim 10s infinite linear;
+        color:white;
+        text-align: center;
+    }
+    @keyframes drift {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            transform: translate3d(-1692px, 0, 0);
+        }
+    }
+    @keyframes scroll-anim {
+        0% {
+            
+            background-position: 1% 0;
+        }
+        100% {
+            background-position: 50% 0;
+        }
+    }

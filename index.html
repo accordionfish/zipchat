@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.5/mousetrap.min.js" integrity="sha512-+Jg3Ynmj9hse704K48H6rBBI3jdNBjReRGBCxUWFfOz3yVurnJFWtAWssDAsGtzWYw89xFWPxShuj2T6E9EOpg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
     <meta charset="UTF-8">
@@ -12,10 +18,16 @@
     <h1>zipchat</h1>
     <p>zipchat is a video calling app made by zippyfish.</p>
     <div id="time"></div>
-    <div id="id"></div>
-    <input type="text" id="id_input">
-    <button id="host" onclick="callfunc()">Call</button>
+    <span id="id"></span>
+    <div id="waiting">Waiting for a call? <br> <div title="hint: konami code(up up down down left right left right b a enter)">Type a secret code for very random things.</div><br>to close the random things, type the equals sign(=).</div>
+
+    <div id="id_container">
+    <input type="text" id="id_input" placeholder="Type the ID you want to call here" autofocus onsubmit="callfunc()">
+    <div id="host-container"><button id="host" onclick="callfunc()"><span class="material-symbols-outlined">
+        call
+        </span></button></div></div>
     <video id="call" src=""></video>
+    <video src="" id="localvideo"></video>
     <audio src="" id="audio"></audio>
 </body>
 <script src="./meet.js"></script>
